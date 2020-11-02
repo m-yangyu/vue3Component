@@ -1,0 +1,55 @@
+{
+  "name": "@ddmc/ui",
+  "version": "1.0.0",
+  "description": "vue3.0的组件库",
+  "main": "/lib/index.js",
+  "scripts": {
+    "build": "npm run clear & webpack --config ./build/webpack.config.js --progress",
+    "dev": "webpack --config ./build/webpack.dev.config.js --progress --watch",
+    "dev:example": "cd example && npm run dev",
+    "clear": "rimraf ./lib",
+    "start": "npm run dev && npm run dev:example",
+    "i": "npm i && npm run build && npm link && cd example && npm i && npm link @ddmc/ui"
+  },
+  "files": [
+    "src",
+    "lib",
+    "packages",
+    "types"
+  ],
+  "keywords": [
+    "vue3.0",
+    "组件库"
+  ],
+  "author": "maqixiang4190@100.me",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-stage-2": "^7.8.3",
+    "@vue/babel-plugin-transform-vue-jsx": "^1.2.1",
+    "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.12.0",
+    "eslint-loader": "^4.0.2",
+    "lerna": "^3.22.1",
+    "mini-css-extract-plugin": "^1.2.0",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.4",
+    "postcss-loader": "^4.0.4",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^10.0.4",
+    "typescript": "^4.0.5",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^16.0.0-beta.9",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.3.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.12.1",
+    "@vue/compiler-sfc": "^3.0.2"
+  }
+}

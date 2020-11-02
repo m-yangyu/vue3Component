@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-umd": "^7.12.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.28.0",
+    "vite": "^1.0.0-rc.8"
+  },
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.0.2",
+    "vue": "^3.0.2"
+  }
+}
