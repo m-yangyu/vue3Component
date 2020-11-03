@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "checkJs": false,
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ],
+        "target": "esnext",
+        "module": "esnext",
+        "noEmit": false,
+        "sourceMap": true,
+        "strict": true,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@packages/*": ["./packages/*"]
+        },
+        "types": [
+            "./types/vue",
+            "./types/package"
+        ]
+    },
+    "include": ["src/**/*", "packages/**/*"]
+}

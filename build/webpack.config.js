@@ -1,20 +1,20 @@
 const path = require('path');
 const MiniCssExtrackPlugin = require('mini-css-extract-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const config = require('./config');
+const { alias } = require('./config');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/index.js'),
+    entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
         filename: 'index.js',
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/'
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
-        alias: config.alias,
-        modules: ['node_modules']
+        extensions: ['.js', '.vue', '.json', 'ts', 'tsx', 'jsx'],
+        alias,
+        modules: ['node_modules'],
     },
     optimization: {
         minimize: false,

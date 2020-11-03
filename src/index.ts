@@ -1,10 +1,11 @@
-import Button from '../packages/button/index';
+import { VueConstructor } from 'vue';
+import Button from '@packages/button';
 
 const components = [
     Button,
 ]
 
-const install = function(Vue) {
+const install = function(Vue: VueConstructor) {
     components.forEach(compoennt => {
         Vue.component(compoennt.name, compoennt);
     })
