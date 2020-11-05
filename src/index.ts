@@ -6,8 +6,8 @@ const components = [
 ]
 
 const install = function(Vue: VueConstructor) {
-    components.forEach(compoennt => {
-        Vue.component(compoennt.name, compoennt);
+    components.forEach(component => {
+        Vue.component(component.name, component);
     })
 }
 

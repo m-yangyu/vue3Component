@@ -1,5 +1,5 @@
 declare module '*.vue' {
-    import Vue, { VueConstructor } from 'vue';
+    import { VueConstructor } from 'vue';
     interface V extends VueConstructor {
         install: (Vue: VueConstructor) => void;
     }

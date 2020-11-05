@@ -7,12 +7,12 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
-        filename: 'index.js',
+         filename: 'index.js',
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/'
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json', 'ts', 'tsx', 'jsx'],
+        extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.jsx'],
         alias,
         modules: ['node_modules'],
     },
@@ -32,6 +32,11 @@ module.exports = {
             {
                 test: /\.(ts|tsx)$/,
                 loader: 'ts-loader',
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                    context: process.cwd(),
+                    configFile: 'tsconfig.json',
+                }
             },
             {
                 test: /\.(sass|scss)$/,
@@ -53,6 +58,6 @@ module.exports = {
     },
     plugins: [
         new ProgressBarPlugin(),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
     ]
 }

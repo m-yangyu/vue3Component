@@ -11,18 +11,25 @@
         "module": "esnext",
         "noEmit": false,
         "sourceMap": true,
+        "pretty": true,
         "strict": true,
         "jsx": "preserve",
         "importHelpers": true,
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
+            "*": [
+                "*",
+                "./*",
+                "./types/*",
+                "../types/*"
+            ],
             "@packages/*": ["./packages/*"]
-        },
-        "types": [
-            "./types/vue",
-            "./types/package"
-        ]
+        }
     },
-    "include": ["src/**/*", "packages/**/*"]
+    "include": [
+        "src/**/*",
+        "packages/**/*",
+        "types"
+    ]
 }
