@@ -3,18 +3,27 @@ const MiniCssExtrackPlugin = require('mini-css-extract-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const { alias } = require('./config');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
          filename: 'index.js',
         path: path.resolve(process.cwd(), './lib'),
-        publicPath: '/dist/'
+        publicPath: '/dist/',
+        libraryExport: 'default',
+        library: 'ddmcUI',
+        libraryTarget: 'commonjs2'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.jsx'],
         alias,
         modules: ['node_modules'],
+        plugins: [
+            new TsconfigPathsPlugin({
+                configFile: path.resolve(process.cwd(), 'tsconfig.json')
+            })
+        ]
     },
     optimization: {
         minimize: false,
@@ -24,6 +33,14 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
+            },
+            {
+                test: /\.(js|ts|tsx|jsx)$/,
+                enforce: 'pre',
+                loader: 'eslint-loader',
+                options: {
+                    formatter: require('eslint-friendly-formatter')
+                }
             },
             {
                 test: /\.(js|jsx)$/,

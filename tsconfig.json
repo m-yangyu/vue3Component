@@ -24,12 +24,13 @@
                 "./types/*",
                 "../types/*"
             ],
+            "@/types/*": ["./types/*"],
             "@packages/*": ["./packages/*"]
         }
     },
-    "include": [
-        "src/**/*",
-        "packages/**/*",
-        "types"
-    ]
+   "exclude": [
+       "node_modules",
+       "build",
+       "example"
+   ]
 }
