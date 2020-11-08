@@ -8,7 +8,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
-         filename: 'index.js',
+        filename: 'index.js',
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/',
         libraryExport: 'default',
@@ -48,12 +48,18 @@ module.exports = {
             },
             {
                 test: /\.(ts|tsx)$/,
-                loader: 'ts-loader',
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                    context: process.cwd(),
-                    configFile: 'tsconfig.json',
-                }
+                use: [
+                    { loader: 'cache-loader' },
+                    { loader: 'babel-loader' },
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            appendTsSuffixTo: [/\.vue$/],
+                            context: process.cwd(),
+                            configFile: 'tsconfig.json',
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(sass|scss)$/,

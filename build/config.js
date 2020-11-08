@@ -2,7 +2,7 @@ const path = require('path');
 
 const alias = {
     '@': process.cwd(),
-    '@packages': path.resolve(__dirname, '../packages'),
+    '@components': path.resolve(__dirname, '../components'),
 }
 
 module.exports = {

@@ -1,7 +1,7 @@
 declare module '@/packages/*' {
-    import { VueConstructor } from 'vue';
-    interface V extends VueConstructor {
-        install: (Vue: VueConstructor) => void;
+    import { App } from 'vue';
+    interface V extends App {
+        install: (Vue: App) => void;
     }
     const VExtend: V;
     export default VExtend;

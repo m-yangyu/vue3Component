@@ -18,14 +18,8 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
-            "*": [
-                "*",
-                "./*",
-                "./types/*",
-                "../types/*"
-            ],
-            "@/types/*": ["./types/*"],
-            "@packages/*": ["./packages/*"]
+            "vue": ["./node_modules/vue"],
+            "@components/*": ["components/*"]
         }
     },
    "exclude": [
