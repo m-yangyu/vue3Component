@@ -35,11 +35,12 @@ module.exports = {
                 loader: 'vue-loader',
             },
             {
-                test: /\.(js|ts|tsx|jsx)$/,
+                test: /\.(js|ts|tsx|jsx|vue)$/,
                 enforce: 'pre',
                 loader: 'eslint-loader',
                 options: {
-                    formatter: require('eslint-friendly-formatter')
+                    formatter: require('eslint-friendly-formatter'),
+                    fix: true,
                 }
             },
             {
