@@ -12,7 +12,6 @@ module.exports = {
 	],
 	extends: [
 		'airbnb-base',
-		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended',
 	],
@@ -36,7 +35,6 @@ module.exports = {
 		'consistent-return': 0,
 		'import/no-cycle': 1,
 		'no-useless-constructor': 0,
-		// 'no-console': process.env.NODE_ENV !== 'production' ? 1 : 2
 		'no-console': 1,
 	},
 };

@@ -7,7 +7,7 @@
             "dom.iterable",
             "scripthost"
         ],
-        "target": "esnext",
+        "target": "ES2019",
         "module": "esnext",
         "noEmit": false,
         "sourceMap": true,
@@ -16,6 +16,7 @@
         "jsx": "preserve",
         "importHelpers": true,
         "moduleResolution": "node",
+        "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
             "vue": ["./node_modules/vue"],

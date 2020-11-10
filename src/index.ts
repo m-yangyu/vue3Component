@@ -5,7 +5,7 @@ const components = [
 	Button,
 ];
 
-const install = function (Vue: ComponentOptions): void {
+const install = (Vue: ComponentOptions): void => {
 	components.forEach((component) => {
 		Vue.component(component.name, component);
 	});
