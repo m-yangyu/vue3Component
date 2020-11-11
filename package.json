@@ -2,7 +2,7 @@
   "name": "@ddmc/ui",
   "version": "1.0.0",
   "description": "vue3.0的组件库",
-  "main": "/lib/index.js",
+  "main": "/lib",
   "sideEffects": false,
   "scripts": {
     "build": "npm run clear & webpack --config ./build/webpack.config.js --progress",
