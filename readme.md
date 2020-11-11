@@ -6,7 +6,7 @@
 
 ### 安装node_modules
 
-npm run i
+npm run bootstrap
 
 这个命令会执行几个步骤
 
