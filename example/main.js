@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './app.vue';
-import ddmcUI from '@ddmc/ui';
+import ddmcUI from '@ddmc/ui/src';
 
 const app = createApp(App);
 

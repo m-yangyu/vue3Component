@@ -36,5 +36,6 @@ module.exports = {
 		'import/no-cycle': 1,
 		'no-useless-constructor': 0,
 		'no-console': 1,
+		'import/extensions': 0,
 	},
 };
