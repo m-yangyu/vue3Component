@@ -7,7 +7,8 @@
   "scripts": {
     "build:esmodule": "npm run clear & webpack --config ./build/webpack.pro.config.js --progress",
     "build:component": "webpack --config ./build/webpack.component.config.js --progress",
-    "build:all": "npm run build:esmodule && npm run build:component",
+    "build": "npm run build:esmodule && npm run build:component",
+    "publish": "/bin/sh ./build/publish.sh",
     "dev": "webpack --config ./build/webpack.dev.config.js --progress --watch",
     "dev:node": "node ./script/watch.js",
     "dev:example": "cd example && npm run dev",
@@ -57,6 +58,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-vue": "^7.1.0",
     "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.2.0",
     "node-sass": "^4.14.1",
