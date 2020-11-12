@@ -8,7 +8,9 @@ const srcDir = `${root}/src`;
 const componentDir = `${root}/components`;
 
 module.exports = merge(base, {
-    entry: path.resolve(__dirname, '../src/index.ts'),
+    entry: {
+        index: path.resolve(__dirname, '../src/index.ts'),
+    },
     plugins: [
         new CopyPlugin({
             patterns: [
