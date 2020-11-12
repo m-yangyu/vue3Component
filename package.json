@@ -5,7 +5,9 @@
   "main": "/lib",
   "sideEffects": false,
   "scripts": {
-    "build": "npm run clear & webpack --config ./build/webpack.config.js --progress",
+    "build:esmodule": "npm run clear & webpack --config ./build/webpack.pro.config.js --progress",
+    "build:component": "webpack --config ./build/webpack.component.config.js --progress",
+    "build:all": "npm run build:esmodule && npm run build:component",
     "dev": "webpack --config ./build/webpack.dev.config.js --progress --watch",
     "dev:node": "node ./script/watch.js",
     "dev:example": "cd example && npm run dev",

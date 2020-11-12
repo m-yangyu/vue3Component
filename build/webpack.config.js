@@ -6,9 +6,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/',
         chunkFilename: '[id].js',
