@@ -8,7 +8,7 @@
     "build:esmodule": "npm run clear & webpack --config ./build/webpack.pro.config.js --progress",
     "build:component": "webpack --config ./build/webpack.component.config.js --progress",
     "build": "npm run build:esmodule && npm run build:component",
-    "publish": "/bin/sh ./build/publish.sh",
+    "release": "/bin/sh ./build/publish.sh",
     "dev": "webpack --config ./build/webpack.dev.config.js --progress --watch",
     "dev:node": "node ./script/watch.js",
     "dev:example": "cd example && npm run dev",
