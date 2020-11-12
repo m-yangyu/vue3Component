@@ -11,6 +11,7 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/',
+        chunkFilename: '[id].js',
         libraryExport: 'default',
         library: 'ddmcUI',
         libraryTarget: 'commonjs2'
@@ -26,7 +27,18 @@ module.exports = {
         ]
     },
     optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vue: {
+                    test: '/vue/',
+                    
+                }
+            }
+        },
         minimize: false,
+    },
+    externals: {
+        vue: 'vue',
     },
     module: {
         rules: [
