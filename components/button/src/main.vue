@@ -1,19 +1,14 @@
 <template>
   <div>{{ buttonObject.text }}</div>
 </template>
-<script lang="ts">
+<script setup="props" lang="ts">
 import { reactive } from 'vue';
 
-export default {
-	name: 'Button',
-	setup() {
-		const buttonObject = reactive({
-			text: '1',
-			number: 2,
-		});
-		return {
-			buttonObject,
-		};
-	},
-};
+console.log(123);
+
+export const buttonObject = reactive({
+	text: '1',
+	number: 2,
+});
+
 </script>

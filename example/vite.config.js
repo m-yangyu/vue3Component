@@ -1,7 +1,5 @@
-const viteConfig = {
+export default {
     alias: {
         '@components': '@ddmc/ui/components',
     }
 }
-
-export default viteConfig;

@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite --debug"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +12,7 @@
     "@babel/plugin-transform-modules-umd": "^7.12.1",
     "node-sass": "^5.0.0",
     "sass": "^1.28.0",
-    "vite": "^1.0.0-rc.8"
+    "vite": "^1.0.0-rc.9"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.0.2",
