@@ -1,5 +1,5 @@
 {
-  "name": "@ddmc/ui",
+  "name": "vue3Component",
   "version": "1.0.0",
   "description": "vue3.0的组件库",
   "main": "/lib",
@@ -14,7 +14,7 @@
     "dev:example": "cd example && npm run dev",
     "clear": "rimraf ./lib",
     "start": "npm run dev && npm run dev:example",
-    "bootstrap": "npm i && npm run build && npm link && cd example && npm i && npm link @ddmc/ui",
+    "bootstrap": "npm i && npm run build && npm link && cd example && npm i && npm link vue3Component",
     "lint": "eslint src",
     "test": "jest --config ./jest.config.js"
   },
@@ -28,7 +28,7 @@
     "vue3.0",
     "组件库"
   ],
-  "author": "maqixiang4190@100.me",
+  "author": "mqx",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.3",
