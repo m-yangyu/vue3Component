@@ -28,7 +28,7 @@ npm run build
 # publish
 if [[ $ISTAG =~ ^[Yy]$  ]]
 then
-npm publish --tag beta
+npm publish --tag=beta
 else
 npm publish
 fi
