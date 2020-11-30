@@ -2,10 +2,7 @@ module.exports = {
 	rootDir: '.',
 	moduleFileExtensions: [
 		'js',
-		'json',
-		'vue',
 		'ts',
-		'tsx',
 	],
 	transform: {
 		'.*\\.(vue)$': 'vue-jest',
@@ -14,9 +11,9 @@ module.exports = {
 	},
 	collectCoverage: true,
 	collectCoverageFrom: [
-		'**/*.{js,vue,ts,tsx,jsx}',
+		'**/*.{vue,ts}',
 		'!**/node_modules/**',
-		'!<rootDir>/types/*.d.ts',
+		'!**/*/*.d.ts',
 	],
 	cacheDirectory: '<rootDir>/.cache/unit',
 };
