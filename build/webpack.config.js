@@ -13,7 +13,7 @@ module.exports = {
         chunkFilename: '[id].js',
         libraryExport: 'default',
         library: 'ddmcUI',
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.jsx'],
