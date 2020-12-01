@@ -1,9 +1,9 @@
 import { createApp } from 'vue';
 import App from './app.vue';
-import ddmcUI from '@ddmc/ui/src';
+import Component from 'vue3-component/src';
 
 const app = createApp(App);
 
-app.use(ddmcUI);
+app.use(Component);
 
 app.mount('#app');

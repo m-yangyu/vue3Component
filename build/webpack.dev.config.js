@@ -10,13 +10,5 @@ const componentDir = `${root}/components`;
 module.exports = merge(base, {
     entry: {
         index: path.resolve(__dirname, '../src/index.ts'),
-    },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                { from: srcDir, to: 'src'},
-                { from: componentDir, to: 'components'},
-            ]
-        })
-    ]
+    }
 })

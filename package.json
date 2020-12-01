@@ -1,5 +1,5 @@
 {
-  "name": "vue3Component",
+  "name": "vue3-component",
   "version": "1.0.0",
   "description": "vue3.0的组件库",
   "main": "/lib",
@@ -14,7 +14,7 @@
     "dev:example": "cd example && npm run dev",
     "clear": "rimraf ./lib",
     "start": "npm run dev && npm run dev:example",
-    "bootstrap": "npm i && npm run build && npm link && cd example && npm i && npm link vue3Component",
+    "bootstrap": "npm i && npm run build && npm link && cd example && npm i && npm link vue3-component",
     "lint": "eslint src",
     "test": "jest --config ./jest.config.js"
   },
